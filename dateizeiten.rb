@@ -10,11 +10,11 @@
 def testfile 
   puts "atime: " + File.atime("testfile").to_s
   puts "ctime: " + File.ctime("testfile").to_s
-  
-  a = File.ctime("testfile")
-  b = a.to_i
-  
-  puts b
+  at = File.atime("testfile")
+  ct = File.ctime("testfile")
+  b = ct.to_i
+  puts "ctime: " + b.to_s
+  puts "(atime was: " + File.atime("testfile").to_i.to_s + ")" 
 end
 
 
